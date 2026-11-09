@@ -77,3 +77,7 @@ git push -u origin main
 5. После деплоя в `index.html` замени `og:image` на полный адрес, например `https://USERNAME.github.io/REPO/assets/og-image.jpg`, иначе Telegram и LinkedIn не покажут превью.
 
 Чтобы обновить сайт: `git add .`, `git commit -m "..."`, `git push`.
+
+**Если менял `styles.css`, `script.js` или `i18n.js`**, увеличь номер версии в их подключении в конце `index.html` (`?v=11` → `?v=12`). GitHub разрешает браузерам 10 минут хранить эти файлы в кэше, и без нового номера вернувшиеся посетители могут какое-то время видеть старый дизайн с новыми данными.
+
+Если публикация на GitHub упала (Actions → pages build and deployment, красный крестик) с ошибкой «Timeout reached», это сбой GitHub: перезапусти через **Re-run jobs** или отправь пустой коммит: `git commit --allow-empty -m "Redeploy"` и `git push`.
