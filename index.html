@@ -1,0 +1,368 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Heorhii Shersheriia — Designer Team Lead · CV & Portfolio</title>
+  <meta name="description" content="Heorhii Shersheriia, Designer Team Lead and creative designer. Performance creatives, team leadership and automation. CV and portfolio.">
+
+  <!-- Превью ссылки в Telegram, LinkedIn и т.д. После деплоя замени на полный адрес сайта -->
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Heorhii Shersheriia — Designer Team Lead">
+  <meta property="og:description" content="CV and portfolio: performance creatives, team leadership and automation.">
+  <meta property="og:image" content="assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0d0d0f">
+
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="nav">
+    <a class="nav__logo" href="#top">Heorhii Shersheriia</a>
+    <nav class="nav__links" aria-label="Main">
+      <a href="#top" data-i18n="nav.about">About</a>
+      <a href="#portfolio" data-i18n="nav.portfolio">Portfolio</a>
+      <a href="#experience" data-i18n="nav.experience">Experience</a>
+      <a href="#skills" data-i18n="nav.skills">Skills</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="nav__right">
+      <div class="lang" role="group" aria-label="Language">
+        <button type="button" data-lang="en" aria-pressed="true">EN</button>
+        <button type="button" data-lang="uk" aria-pressed="false">UA</button>
+      </div>
+      <a class="nav__cta" href="#contact" data-i18n="nav.hire">Get in touch</a>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== Hero ===== -->
+    <section class="hero" id="top">
+      <div class="hero__text">
+        <p class="hero__status"><span class="dot"></span> <span data-i18n="hero.status">Open to new opportunities</span></p>
+        <h1 class="hero__name">Heorhii<br>Shersheriia</h1>
+        <p class="hero__role"><span data-i18n="hero.role">Designer Team Lead</span><span class="hero__role-sub" data-i18n="hero.roleSub">Creative Design · Performance Marketing</span></p>
+        <p class="hero__lead" data-i18n="hero.lead">I combine creative design, team leadership and automation. I develop people and build processes that help design teams work more efficiently — and creatives that perform.</p>
+        <div class="hero__actions">
+          <a class="btn btn--accent" href="#portfolio" data-i18n="hero.ctaWork">View portfolio</a>
+          <a class="btn btn--ghost" href="assets/Heorhii_Shersheriia_CV_EN_2026.pdf" download data-i18n="hero.ctaCv">Download CV (PDF)</a>
+        </div>
+        <ul class="hero__facts">
+          <li><span data-i18n="hero.location">Kremenchuk · Kyiv, Ukraine</span></li>
+          <li><span data-i18n="hero.langs">Ukrainian · Russian · English</span></li>
+        </ul>
+      </div>
+      <figure class="hero__photo">
+        <img src="assets/photo.jpg" alt="Heorhii Shersheriia" width="900" height="1200" fetchpriority="high">
+      </figure>
+    </section>
+
+    <!-- ===== Results ===== -->
+    <section class="results" aria-labelledby="results-title">
+      <div class="results__head">
+        <p class="eyebrow" data-i18n="results.eyebrow">Key results</p>
+        <h2 class="results__title" id="results-title"><span data-i18n="results.title">As Designer Team Lead at</span> <span class="results__company">EVADAV</span></h2>
+        <p class="results__period" data-i18n="results.period">Jun 2025 — Sep 2026</p>
+      </div>
+      <ul class="results__grid">
+        <li><strong data-count="81" data-prefix="+">+81%</strong><span data-i18n="results.r1">Team productivity</span></li>
+        <li><strong data-count="64" data-prefix="+">+64%</strong><span data-i18n="results.r2">Peak monthly profit from team creatives</span></li>
+        <li><strong data-count="53" data-prefix="−">−53%</strong><span data-i18n="results.r3">AI generation costs, same output</span></li>
+        <li><strong data-count="44" data-prefix="+">+44%</strong><span data-i18n="results.r4">Successful creatives</span></li>
+      </ul>
+    </section>
+
+    <!-- ===== Portfolio ===== -->
+    <section class="section" id="portfolio" aria-labelledby="portfolio-title">
+      <div class="section__head">
+        <p class="eyebrow" data-i18n="portfolio.eyebrow">Portfolio</p>
+        <h2 id="portfolio-title" data-i18n="portfolio.title">Selected work</h2>
+        <p class="section__sub" data-i18n="portfolio.sub">Video ads for mobile apps and consumer brands. Hover to preview, click to watch with sound.</p>
+      </div>
+      <div class="works" id="works"></div>
+    </section>
+
+    <!-- ===== Experience ===== -->
+    <section class="section" id="experience" aria-labelledby="exp-title">
+      <div class="section__head">
+        <p class="eyebrow" data-i18n="exp.eyebrow">Experience</p>
+        <h2 id="exp-title" data-i18n="exp.title">Where I’ve worked</h2>
+      </div>
+
+      <ol class="timeline">
+        <li class="role role--main">
+          <div class="role__when"><span>Jun 2025 — Sep 2026</span></div>
+          <div class="role__body">
+            <h3 class="role__title" data-i18n="exp.lead.title">Designer Team Lead</h3>
+            <p class="role__company">EVADAV</p>
+            <div class="role__blocks">
+              <div class="block">
+                <h4><span>01</span> <span data-i18n="exp.lead.b1t">Measurable results</span></h4>
+                <p data-i18n="exp.lead.b1">Monthly profit from the team’s creatives peaked 64% above the pre-leadership average — through ideas, analysis and creative production. Cut AI generation costs by 53% while maintaining output volume.</p>
+              </div>
+              <div class="block">
+                <h4><span>02</span> <span data-i18n="exp.lead.b2t">Systems & automation</span></h4>
+                <p data-i18n="exp.lead.b2">Built KPI calculation systems and collaboration processes with media buyers. Developed plugins, scripts and spreadsheets, introduced new workflows. Optimized costs without reducing salaries. Created hypotheses, concepts and variations that increased media-buying teams’ ROI.</p>
+              </div>
+              <div class="block">
+                <h4><span>03</span> <span data-i18n="exp.lead.b3t">Leadership & people development</span></h4>
+                <p data-i18n="exp.lead.b3">Led a team in Performance Marketing and Product across ADULT, SEARCH and APPS. Trained beginners from scratch to a strong level and coached experienced designers individually. Managed onboarding and offboarding and kept a supportive team culture.</p>
+              </div>
+              <div class="block">
+                <h4><span>04</span> <span data-i18n="exp.lead.b4t">Confluence knowledge base</span></h4>
+                <p data-i18n="exp.lead.b4">Wrote guides covering services, AI, workflows, role responsibilities, task estimation, website creation and the team’s complete toolset.</p>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <li class="role role--main">
+          <div class="role__when"><span>Aug 2024 — May 2025</span></div>
+          <div class="role__body">
+            <h3 class="role__title" data-i18n="exp.cd.title">Creative Designer</h3>
+            <p class="role__company">EVADAV</p>
+            <p data-i18n="exp.cd.text">Developed creatives for media buyers in Performance Marketing, Product, E-commerce, Search Arbitrage, APPS and ADULT (18+).</p>
+          </div>
+        </li>
+
+        <li class="role role--main">
+          <div class="role__when"><span>Nov 2023 — Jun 2024</span></div>
+          <div class="role__body">
+            <h3 class="role__title" data-i18n="exp.md.title">Motion Designer</h3>
+            <p class="role__company">Digital Company</p>
+            <p data-i18n="exp.md.text">Created video creatives and static assets in multiple languages. Domains: Dating, Search, Software Development, Mental Health, Astrology, Online School, Cyber Security, UX Design, Password Manager, Influence, Data Analytics, Web Development, Fitness apps.</p>
+          </div>
+        </li>
+      </ol>
+
+      <details class="earlier">
+        <summary><span data-i18n="exp.earlier">Earlier career: engineering, client relations, photography</span> <span class="earlier__icon" aria-hidden="true">+</span></summary>
+        <ol class="timeline timeline--compact">
+          <li class="role">
+            <div class="role__when"><span>Dec 2022 — Dec 2023</span></div>
+            <div class="role__body">
+              <h3 class="role__title" data-i18n="exp.de1.title">Design Engineer</h3>
+              <p class="role__company" data-i18n="exp.de1.company">Petrenko (sole proprietor)</p>
+              <p data-i18n="exp.de1.text">Designed cottages across Ukraine as a design engineer and architect. 3D models in Revit, project presentations in Lumion.</p>
+            </div>
+          </li>
+          <li class="role">
+            <div class="role__when"><span>Aug 2022 — Dec 2022</span></div>
+            <div class="role__body">
+              <h3 class="role__title" data-i18n="exp.crm.title">Client Relations Manager</h3>
+              <p class="role__company">Afon&amp;Edem</p>
+              <p data-i18n="exp.crm.text">Advised clients on using the company’s services.</p>
+            </div>
+          </li>
+          <li class="role">
+            <div class="role__when"><span>Nov 2020 — Jul 2021</span></div>
+            <div class="role__body">
+              <h3 class="role__title" data-i18n="exp.de2.title">Design Engineer</h3>
+              <p class="role__company">AL&amp;MA GROUP</p>
+              <p data-i18n="exp.de2.text">Design and drafting tasks; Revit 3D models of apartment buildings in the Poltava region.</p>
+            </div>
+          </li>
+          <li class="role">
+            <div class="role__when"><span>Aug 2020 — Oct 2020</span></div>
+            <div class="role__body">
+              <h3 class="role__title" data-i18n="exp.ph.title">Photographer</h3>
+              <p class="role__company">FOTOSFERA</p>
+              <p data-i18n="exp.ph.text">Studio shoots, photo editing and retouching in Adobe Photoshop and Lightroom Classic.</p>
+            </div>
+          </li>
+        </ol>
+      </details>
+    </section>
+
+    <!-- ===== Skills ===== -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="section__head">
+        <p class="eyebrow" data-i18n="skills.eyebrow">Skills</p>
+        <h2 id="skills-title" data-i18n="skills.title">What I bring</h2>
+      </div>
+
+      <div class="skills">
+        <article class="skill skill--wide">
+          <h3 data-i18n="skills.analytics">Creative analytics</h3>
+          <p data-i18n="skills.analyticsText">I analyze creative performance, conversions and profitability, and use data to build hypotheses and optimize creatives.</p>
+          <ul class="chips chips--accent">
+            <li>CTR</li><li>CPC</li><li>CPM</li><li>CPA</li><li>CVR</li><li>ROI</li><li>Hook Rate</li><li>Hold Rate</li><li>Thumbstop Rate</li><li>VCR</li><li>CPV</li><li>AWT</li><li>CPL</li><li>CPI</li><li>EPC</li><li>RPC</li><li>RPM</li><li>LTV</li><li>CAC</li><li>Spend</li><li>Revenue</li>
+          </ul>
+        </article>
+
+        <article class="skill">
+          <h3 data-i18n="skills.focus">Focus</h3>
+          <ul class="chips">
+            <li data-i18n="skills.f1">Team development</li>
+            <li data-i18n="skills.f2">KPIs & processes</li>
+            <li data-i18n="skills.f3">Automation</li>
+            <li data-i18n="skills.f4">Creative concepts</li>
+            <li data-i18n="skills.f5">Efficiency & ROI</li>
+          </ul>
+          <p class="skill__note" data-i18n="skills.approachText">Discipline, individual development and a focus on team and project results.</p>
+        </article>
+
+        <article class="skill">
+          <h3 data-i18n="skills.domains">Domains</h3>
+          <ul class="chips">
+            <li>Performance Marketing</li><li>Product</li><li>E-commerce</li><li>Search Arbitrage</li><li>APPS</li>
+          </ul>
+        </article>
+
+        <article class="skill skill--wide">
+          <h3 data-i18n="skills.ai">AI tools</h3>
+          <ul class="chips">
+            <li data-i18n="skills.higgs">Higgsfield (full toolset)</li><li>Seedance</li><li>Claude</li><li>ChatGPT</li><li>Grok Imagine</li><li>Kling</li><li>Runway</li><li>Suno</li><li>ElevenLabs</li><li>TopMedia</li><li>Vozo</li><li>HeyGen</li>
+          </ul>
+        </article>
+
+        <article class="skill">
+          <h3 data-i18n="skills.tools">Design & video tools</h3>
+          <ul class="chips">
+            <li>After Effects</li><li>Photoshop</li><li>Premiere Pro</li><li>Illustrator</li><li>Audition</li><li>Lightroom Classic</li><li data-i18n="skills.plugins">Adobe plugins</li><li>CapCut</li><li>Revit</li><li>Lumion</li><li>Confluence</li>
+          </ul>
+        </article>
+
+        <article class="skill">
+          <h3 data-i18n="skills.qualities">Personal qualities</h3>
+          <ul class="chips">
+            <li data-i18n="skills.q1">Organization</li>
+            <li data-i18n="skills.q2">Communication</li>
+            <li data-i18n="skills.q3">Resilience under pressure</li>
+            <li data-i18n="skills.q4">Logical thinking</li>
+            <li data-i18n="skills.q5">Flexibility & adaptability</li>
+          </ul>
+        </article>
+
+        <article class="skill">
+          <h3 data-i18n="skills.languages">Languages</h3>
+          <ul class="chips">
+            <li data-i18n="skills.l1">Ukrainian</li><li data-i18n="skills.l2">Russian</li><li data-i18n="skills.l3">English</li>
+          </ul>
+        </article>
+      </div>
+
+      <div class="edu">
+        <h3 class="edu__title" data-i18n="edu.title">Education</h3>
+        <ul class="edu__list">
+          <li>
+            <strong data-i18n="edu.e1">Construction & Civil Engineering</strong>
+            <span data-i18n="edu.e1place">National University “Yuri Kondratyuk Poltava Polytechnic”</span>
+            <em data-i18n="edu.e1years">Bachelor’s 2019–2023 · Master’s 2023–present</em>
+          </li>
+          <li>
+            <strong data-i18n="edu.e2">Programming</strong>
+            <span data-i18n="edu.e2place">IT STEP Computer Academy</span>
+            <em>2019–2020</em>
+          </li>
+          <li>
+            <strong data-i18n="edu.e3">Photography</strong>
+            <span data-i18n="edu.e3place">FOTOSFERA School, Kremenchuk</span>
+            <em>2019</em>
+          </li>
+          <li>
+            <strong>Skillbox</strong>
+            <span data-i18n="edu.e4place">Online courses</span>
+            <em>2019</em>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== Contact ===== -->
+    <section class="contact" id="contact" aria-labelledby="contact-title">
+      <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
+      <h2 id="contact-title" data-i18n="contact.title">Get in touch</h2>
+      <p class="contact__sub" data-i18n="contact.sub">The fastest way to reach me is Telegram. I usually reply within a day.</p>
+
+      <ul class="contact__grid">
+        <li class="contact__card">
+          <span class="contact__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.7 3.3 2.9 10.2c-1.2.5-1.2 1.2-.2 1.5l4.6 1.4 10.6-6.7c.5-.3 1-.1.6.2l-8.6 7.8-.3 4.7c.5 0 .7-.2.9-.4l2.2-2.2 4.6 3.4c.9.5 1.5.2 1.7-.8l3-14.3c.3-1.2-.4-1.8-1.3-1.5Z"/></svg>
+          </span>
+          <span class="contact__text">
+            <span class="contact__label">Telegram</span>
+            <a class="contact__value" href="https://t.me/georgeshersh" target="_blank" rel="noopener">@georgeshersh</a>
+          </span>
+          <span class="contact__actions">
+            <button class="chip-btn" type="button" data-copy="@georgeshersh" data-i18n="contact.copy">Copy</button>
+            <a class="chip-btn chip-btn--accent" href="https://t.me/georgeshersh" target="_blank" rel="noopener" data-i18n="contact.open">Message</a>
+          </span>
+        </li>
+        <li class="contact__card">
+          <span class="contact__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+          </span>
+          <span class="contact__text">
+            <span class="contact__label">Email</span>
+            <a class="contact__value" href="mailto:sherger.poems@gmail.com">sherger.poems@gmail.com</a>
+          </span>
+          <span class="contact__actions">
+            <button class="chip-btn" type="button" data-copy="sherger.poems@gmail.com" data-i18n="contact.copy">Copy</button>
+            <a class="chip-btn chip-btn--accent" href="mailto:sherger.poems@gmail.com" data-i18n="contact.write">Write</a>
+          </span>
+        </li>
+        <li class="contact__card">
+          <span class="contact__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2Z"/></svg>
+          </span>
+          <span class="contact__text">
+            <span class="contact__label" data-i18n="contact.phone">Phone</span>
+            <a class="contact__value" href="tel:+380965483244">+380 96 548 32 44</a>
+          </span>
+          <span class="contact__actions">
+            <button class="chip-btn" type="button" data-copy="+380965483244" data-i18n="contact.copy">Copy</button>
+            <a class="chip-btn chip-btn--accent" href="tel:+380965483244" data-i18n="contact.call">Call</a>
+          </span>
+        </li>
+        <li class="contact__card">
+          <span class="contact__icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8Z"/><path d="M14 2v6h6M12 18v-6M9 15l3 3 3-3"/></svg>
+          </span>
+          <span class="contact__text">
+            <span class="contact__label" data-i18n="contact.cv">CV</span>
+            <a class="contact__value" href="assets/Heorhii_Shersheriia_CV_EN_2026.pdf" target="_blank" rel="noopener" data-i18n="contact.cvValue">PDF, English</a>
+          </span>
+          <span class="contact__actions">
+            <a class="chip-btn" href="assets/Heorhii_Shersheriia_CV_EN_2026.pdf" target="_blank" rel="noopener" data-i18n="contact.view">View</a>
+            <a class="chip-btn chip-btn--accent" href="assets/Heorhii_Shersheriia_CV_EN_2026.pdf" download data-i18n="contact.download">Download</a>
+          </span>
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year"></span> Heorhii Shersheriia</span>
+    <a href="#top" data-i18n="footer.top">Back to top ↑</a>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- Просмотр работы на весь экран -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-labelledby="lb-title" hidden>
+    <button class="lightbox__close" type="button" data-i18n-label="lb.close" aria-label="Close">✕</button>
+    <button class="lightbox__nav lightbox__nav--prev" type="button" data-i18n-label="lb.prev" aria-label="Previous">←</button>
+    <button class="lightbox__nav lightbox__nav--next" type="button" data-i18n-label="lb.next" aria-label="Next">→</button>
+    <div class="lightbox__inner">
+      <div class="lightbox__media"></div>
+      <div class="lightbox__caption">
+        <p class="lightbox__count"></p>
+        <h3 class="lightbox__title" id="lb-title"></h3>
+        <p class="lightbox__cat"></p>
+        <p class="lightbox__badge" hidden></p>
+        <p class="lightbox__desc"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="i18n.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
