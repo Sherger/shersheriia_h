@@ -120,7 +120,7 @@
   function renderWorks() {
     if (!works.length) return;
     worksEl.innerHTML = works.map((w, i) => `
-      <button class="work${reveal ? "" : " is-visible"}" type="button" data-index="${i}"
+      <button class="work${w.format === "landscape" ? " work--wide" : ""}${reveal ? "" : " is-visible"}" type="button" data-index="${i}"
         aria-label="${esc(t("portfolio.watch"))}: ${esc(pick(w.title))}">
         <div class="work__media">
           <img src="${esc(w.poster)}" alt="" loading="lazy" decoding="async">
@@ -189,6 +189,7 @@
   }
   function showWork() {
     const w = works[current];
+    lightbox.classList.toggle("is-landscape", w.format === "landscape");
     const existing = $("video", lbMedia);
     if (!existing || existing.dataset.src !== w.src) {
       lbMedia.innerHTML = `<video src="${esc(w.src)}" data-src="${esc(w.src)}" poster="${esc(w.poster)}" controls autoplay playsinline></video>`;

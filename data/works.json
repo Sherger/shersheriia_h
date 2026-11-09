@@ -154,5 +154,22 @@
       "en": "UGC-style e-commerce ad for buying smartphones now and paying later.",
       "uk": "UGC-реклама e-commerce: смартфон зараз, оплата потім."
     }
+  },
+  {
+    "src": "assets/works/web/creo-10.mp4",
+    "poster": "assets/works/web/creo-10.jpg",
+    "format": "landscape",
+    "title": {
+      "en": "EVADAV",
+      "uk": "EVADAV"
+    },
+    "category": {
+      "en": "Ad network · Motion design promo",
+      "uk": "Рекламна мережа · Моушн-промо"
+    },
+    "description": {
+      "en": "Horizontal motion-design promo for the EVADAV ad network: global reach, ad formats (Popunder, In-Page, Push), social proof and a promo-code CTA.",
+      "uk": "Горизонтальне моушн-промо для рекламної мережі EVADAV: глобальне охоплення, формати реклами (Popunder, In-Page, Push), соціальні докази та заклик із промокодом."
+    }
   }
 ]
