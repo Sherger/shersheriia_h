@@ -68,6 +68,22 @@
     }
   },
   {
+    "src": "assets/works/web/creo-4-1.mp4",
+    "poster": "assets/works/web/creo-4-1.jpg",
+    "title": {
+      "en": "Sceneo",
+      "uk": "Sceneo"
+    },
+    "category": {
+      "en": "AI app · Video ad",
+      "uk": "AI-застосунок · Відеореклама"
+    },
+    "description": {
+      "en": "App ad for Sceneo: an ordinary product photo turns into studio-quality scenes in three steps — upload, choose a scene, generate.",
+      "uk": "Реклама застосунку Sceneo: звичайне фото товару перетворюється на студійні сцени за три кроки — завантаж, обери сцену, згенеруй."
+    }
+  },
+  {
     "src": "assets/works/web/creo-5.mp4",
     "poster": "assets/works/web/creo-5.jpg",
     "title": {
@@ -85,6 +101,22 @@
     "badge": {
       "en": "100% AI-generated",
       "uk": "100% AI-генерація"
+    }
+  },
+  {
+    "src": "assets/works/web/creo-5-v.mp4",
+    "poster": "assets/works/web/creo-5-v.jpg",
+    "title": {
+      "en": "COMFY",
+      "uk": "COMFY"
+    },
+    "category": {
+      "en": "Electronics retailer · Motion design",
+      "uk": "Ритейл електроніки · Моушн-дизайн"
+    },
+    "description": {
+      "en": "Motion-design ad for the COMFY electronics retailer featuring a robot vacuum: “Too much clutter? We’ll tidy it all up.”",
+      "uk": "Моушн-реклама для COMFY з роботом-пилососом: «Забагато зайвого? Все зайве — приберемо.»"
     }
   },
   {
