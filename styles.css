@@ -172,6 +172,7 @@ p { margin: 0; }
   transition: transform .3s;
 }
 .work__play svg { width: 18px; height: 18px; margin-left: 3px; }
+.work__play--expand svg { margin-left: 0; }
 .work:hover .work__play, .work:focus-visible .work__play { transform: scale(1.1); }
 .work__body { padding: 14px 4px 0; }
 .work__title { font-size: 19px; font-weight: 800; margin-bottom: 2px; }
@@ -288,7 +289,7 @@ a.contact__value:hover { color: var(--accent); }
 .lightbox[hidden] { display: none; }
 .lightbox__inner { display: flex; align-items: center; gap: 48px; max-width: 1100px; width: 100%; height: 100%; justify-content: center; }
 .lightbox__media { flex: 0 0 auto; height: min(calc(100vh - 48px), 900px); height: min(calc(100dvh - 48px), 900px); aspect-ratio: 9 / 16; }
-.lightbox__media video { width: 100%; height: 100%; object-fit: contain; border-radius: 16px; background: #000; }
+.lightbox__media video, .lightbox__media img { width: 100%; height: 100%; object-fit: contain; border-radius: 16px; background: #000; }
 .lightbox__caption { flex: 0 1 340px; }
 /* Горизонтальное видео: широкий плеер, подпись под ним */
 .lightbox.is-landscape .lightbox__inner { flex-direction: column; gap: 20px; max-width: 1200px; height: auto; }

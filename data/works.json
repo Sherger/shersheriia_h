@@ -188,6 +188,27 @@
     }
   },
   {
+    "type": "image",
+    "src": "assets/works/web/cpa-go.jpg",
+    "poster": "assets/works/web/cpa-go-thumb.jpg",
+    "title": {
+      "en": "CPA GO",
+      "uk": "CPA GO"
+    },
+    "category": {
+      "en": "Performance agency · Static creative",
+      "uk": "Performance-агенція · Статичний креатив"
+    },
+    "description": {
+      "en": "Static creative for the CPA GO performance agency, composited by hand in Photoshop from multiple assets.",
+      "uk": "Статичний креатив для performance-агенції CPA GO, зібраний вручну у Photoshop з різних ассетів."
+    },
+    "badge": {
+      "en": "Static · Photoshop",
+      "uk": "Статика · Photoshop"
+    }
+  },
+  {
     "src": "assets/works/web/creo-10.mp4",
     "poster": "assets/works/web/creo-10.jpg",
     "format": "landscape",

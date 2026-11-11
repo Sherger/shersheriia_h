@@ -13,6 +13,7 @@
   EN["meta.title"] = document.title;
   EN["contact.copied"] = "Copied";
   EN["portfolio.watch"] = "Watch";
+  EN["portfolio.view"] = "View";
   const UK = window.I18N_UK || {};
   const MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
@@ -109,6 +110,8 @@
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => (
     { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]
   ));
+  const isImage = (w) => w.type === "image";
+  const expandIcon = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>';
   const playIcon = '<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15a1 1 0 0 0 1.5.86l12.5-7.5a1 1 0 0 0 0-1.72L8.5 3.64A1 1 0 0 0 7 4.5Z"/></svg>';
 
   const reveal = "IntersectionObserver" in window && !reduceMotion
@@ -121,12 +124,12 @@
     if (!works.length) return;
     worksEl.innerHTML = works.map((w, i) => `
       <button class="work${w.format === "landscape" ? " work--wide" : ""}${reveal ? "" : " is-visible"}" type="button" data-index="${i}"
-        aria-label="${esc(t("portfolio.watch"))}: ${esc(pick(w.title))}">
+        aria-label="${esc(t(isImage(w) ? "portfolio.view" : "portfolio.watch"))}: ${esc(pick(w.title))}">
         <div class="work__media">
           <img src="${esc(w.poster)}" alt="" loading="lazy" decoding="async">
           <span class="work__num">${String(i + 1).padStart(2, "0")}</span>
           ${w.badge ? `<span class="work__badge">${esc(pick(w.badge))}</span>` : ""}
-          <span class="work__play" aria-hidden="true">${playIcon}</span>
+          <span class="work__play${isImage(w) ? " work__play--expand" : ""}" aria-hidden="true">${isImage(w) ? expandIcon : playIcon}</span>
         </div>
         <div class="work__body">
           <h3 class="work__title">${esc(pick(w.title))}</h3>
@@ -137,7 +140,7 @@
     $$(".work", worksEl).forEach((card) => {
       if (reveal) reveal.observe(card);
       card.addEventListener("click", () => openWork(Number(card.dataset.index)));
-      if (canHover) {
+      if (canHover && !isImage(works[Number(card.dataset.index)])) {
         card.addEventListener("mouseenter", () => startPreview(card));
         card.addEventListener("mouseleave", () => stopPreview(card));
       }
@@ -190,9 +193,11 @@
   function showWork() {
     const w = works[current];
     lightbox.classList.toggle("is-landscape", w.format === "landscape");
-    const existing = $("video", lbMedia);
+    const existing = $("[data-src]", lbMedia);
     if (!existing || existing.dataset.src !== w.src) {
-      lbMedia.innerHTML = `<video src="${esc(w.src)}" data-src="${esc(w.src)}" poster="${esc(w.poster)}" controls autoplay playsinline></video>`;
+      lbMedia.innerHTML = isImage(w)
+        ? `<img src="${esc(w.src)}" data-src="${esc(w.src)}" alt="${esc(pick(w.title))}">`
+        : `<video src="${esc(w.src)}" data-src="${esc(w.src)}" poster="${esc(w.poster)}" controls autoplay playsinline></video>`;
     }
     $(".lightbox__count", lightbox).textContent = `${String(current + 1).padStart(2, "0")} / ${String(works.length).padStart(2, "0")}`;
     $(".lightbox__title", lightbox).textContent = pick(w.title);
@@ -238,7 +243,7 @@
 
   fetch("data/works.json", { cache: "no-cache" })
     .then((r) => { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then((data) => { works = data.slice(0, 12); renderWorks(); })
+    .then((data) => { works = data; renderWorks(); })
     .catch(() => {
       worksEl.innerHTML = '<p style="color:var(--muted)">Could not load the portfolio. If you opened the file from disk, run a local server (see README).</p>';
     });
